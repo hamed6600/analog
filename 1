@@ -1,0 +1,12 @@
+
+import { TimegraphClient } from "@analog-labs/timegraph-js";
+const timeGraphClient = new TimegraphClient({
+url: "<URL>", // A url to Watch GraphQL instance.  
+sessionKey: "<SSK>", // Session key created by user wallet using WASM SDK
+});
+const functions = await timeGraphClient.fn.subgraph({
+ after:"<after the hashID>",
+ before:"<before the hashiD>",
+ hash:"<Current HashId>",
+ limit:"<number of records>"
+ });
